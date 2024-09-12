@@ -12,8 +12,8 @@ class QAInterface:
         # TODO 连接Fuseki服务器。
         self.fuseki = fuseki.JenaFuseki()
         # TODO 初始化自然语言到SPARQL查询的模块，参数是外部词典列表。
-        self.q2s = q2sparql.Question2Sparql([os.path.join(file_path, 'external_dict', 'movie_title.txt'),
-                                                    os.path.join(file_path, 'external_dict', 'person_name.txt')])
+        self.q2s = q2sparql.Question2Sparql([os.path.join(file_path,'..', 'data', 'conference.txt'),
+                                                    os.path.join(file_path,'..', 'data', 'person.txt')])
 
     def answer(self, question: str):
         my_query = self.q2s.get_sparql(question)
