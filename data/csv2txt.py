@@ -4,9 +4,9 @@
 '''
 
 import pandas as pd
-df = pd.read_csv('./movie_title.csv')
-title = df['movie_title'].values
+df = pd.read_csv('./person.csv')
+title = df['person'].values
 
-with open('./movie_title.txt', 'a') as f:
+with open('./person.txt', 'a') as f:
     for t in title[1:]:
-        f.write(t + ' ' + 'nz' + '\n')
+        f.write(t + ' ' + 'pp' + '\n')
